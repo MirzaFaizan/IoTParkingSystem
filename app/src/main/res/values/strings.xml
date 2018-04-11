@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">IoT Parking</string>
+    <string name="title_activity_maps">Tracking Parking</string>
+</resources>
