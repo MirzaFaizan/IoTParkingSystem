@@ -39,7 +39,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="Available SPOTS: 12"
+                    android:id="@+id/availableslots"
                     android:textSize="30sp"/>
             </RelativeLayout>
         </LinearLayout>
@@ -55,6 +55,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
+                        android:id="@+id/totalslots"
                         android:text="Total SOPTS: 12"
                         android:textSize="30sp"/>
             </RelativeLayout>

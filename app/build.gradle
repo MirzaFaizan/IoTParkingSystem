@@ -30,3 +30,4 @@ dependencies {
 
     //compile 'com.google.firebase:firebase-admin:5.9.0'
 }
+apply plugin: 'com.google.gms.google-services'
