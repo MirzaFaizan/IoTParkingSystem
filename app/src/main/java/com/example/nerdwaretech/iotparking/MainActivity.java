@@ -16,6 +16,8 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 public class MainActivity extends AppCompatActivity {
     TextView title,availableslots,totalslots;
     private DocumentReference documentReference;
+    int totalslotsnumber = 12 ;
+    int availableslotnumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +50,9 @@ public class MainActivity extends AppCompatActivity {
             public void onEvent(DocumentSnapshot documentSnapshot, FirebaseFirestoreException e) {
                 if (documentSnapshot.exists()) {
 
-                    totalslots.setText( "Available Slots: "+ documentSnapshot.getLong( "Air" ).intValue() );
+                    availableslotnumber = totalslotsnumber - documentSnapshot.getLong( "Air" ).intValue();
+
+                    availableslots.setText( "Available Slots: "+ availableslotnumber );
 
                   } else {
                     Log.d( "inElseIf", "nerdware" );
