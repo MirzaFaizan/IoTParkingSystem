@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "84954530858",
-    "firebase_url": "https://iotparking-9482e.firebaseio.com",
-    "project_id": "iotparking-9482e",
-    "storage_bucket": "iotparking-9482e.appspot.com"
+    "project_number": "712860662859",
+    "firebase_url": "https://iot-parking-a0af4.firebaseio.com",
+    "project_id": "iot-parking-a0af4",
+    "storage_bucket": "iot-parking-a0af4.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:84954530858:android:611b328640a6ff0d",
+        "mobilesdk_app_id": "1:712860662859:android:611b328640a6ff0d",
         "android_client_info": {
           "package_name": "com.example.nerdwaretech.iotparking"
         }
       },
       "oauth_client": [
         {
-          "client_id": "84954530858-t36ot2c82putje05g24gttt1r3n7i21j.apps.googleusercontent.com",
+          "client_id": "712860662859-tf9fhl2s69eh4ln01qsae8iio6huhd6p.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCSoQZrvj0kUZyjzTMdrSZatLxw8p2DDbw"
+          "current_key": "AIzaSyCDawgDfGrfccoCQoPWVpNFZUGn-aqu9NY"
         }
       ],
       "services": {

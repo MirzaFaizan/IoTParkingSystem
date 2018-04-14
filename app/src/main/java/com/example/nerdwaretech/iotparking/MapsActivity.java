@@ -57,7 +57,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.setOnMarkerClickListener(new GoogleMap.OnMarkerClickListener() {
             public boolean onMarkerClick(Marker marker) {
                 if(marker.getTitle().equals("BUIC Parking")){
-                    Intent intent = new Intent(MapsActivity.this, MainActivity.class);
+                    Intent intent = new Intent(MapsActivity.this, BUICParking.class);
                     Bundle bundle = new Bundle();
                     intent.putExtra("title","BUIC Parking");
                     startActivity(intent);
@@ -65,7 +65,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 if(marker.getTitle().equals("AIR University Parking")){
                     Intent intent = new Intent(MapsActivity.this, MainActivity.class);
                     Bundle bundle = new Bundle();
-                    intent.putExtra("title","AIR University Parking");
+                    intent.putExtra("title","Air University Parking");
                     startActivity(intent);
                 }
                 return false;

@@ -12,7 +12,8 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 
-public class MainActivity extends AppCompatActivity {
+public class BUICParking extends AppCompatActivity {
+
     TextView title, availableslots, totalslots;
     private DocumentReference documentReference;
     int totalslotsnumber = 12;
@@ -23,11 +24,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate( savedInstanceState );
-        setContentView( R.layout.activity_main );
+        setContentView( R.layout.activity_buicparking );
+
 
         // intializaion firebase.
         FirebaseApp.initializeApp( this );
-        documentReference = FirebaseFirestore.getInstance().collection( "Parking" ).document( "parkings" );
+        documentReference = FirebaseFirestore.getInstance().collection( "Parking" ).document( "buicparking" );
 
 
         // fetching data send from the maps activity.
@@ -42,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         title.setText( bundle.getString( "title" ) );
 
     }
-
     @Override
     protected void onStart() {
         super.onStart();
@@ -52,13 +53,12 @@ public class MainActivity extends AppCompatActivity {
             public void onEvent(DocumentSnapshot documentSnapshot, FirebaseFirestoreException e) {
                 if (documentSnapshot.exists()) {
 
-                        availableslotnumber = totalslotsnumber - documentSnapshot.getLong( "Air" ).intValue();
+                    availableslotnumber = totalslotsnumber - documentSnapshot.getLong( "BUIC" ).intValue();
                         availableslots.setText( "Available Slots: " + availableslotnumber );
-
-                        // a condition used to check whether the parking is full or not.
                         if (availableslotnumber == 0) {
                             Toast.makeText( getApplicationContext(), "Parking is full", Toast.LENGTH_LONG ).show();
                         }
+
 
                     if (availableslotnumber <0){
                         availableslots.setText( "Parking Full: No slot available" );
@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
                 // when the database is empty.
                 else {
 
-                    Toast.makeText( MainActivity.this, "No data exists", Toast.LENGTH_LONG ).show();
+                    Toast.makeText( BUICParking.this, "No data exists", Toast.LENGTH_LONG ).show();
                 }
             }
         } );
