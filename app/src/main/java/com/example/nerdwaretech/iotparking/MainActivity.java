@@ -2,6 +2,7 @@ package com.example.nerdwaretech.iotparking;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
             public void onEvent(DocumentSnapshot documentSnapshot, FirebaseFirestoreException e) {
                 if (documentSnapshot.exists()) {
 
+                    Log.d("Matlab kuch bhi","matlab kuch bhui");
                         availableslotnumber = totalslotsnumber - documentSnapshot.getLong( "Air" ).intValue();
                         availableslots.setText( "Available Slots: " + availableslotnumber );
 
